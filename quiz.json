@@ -1,0 +1,59 @@
+{
+    "quiz": {
+        "1": {
+            "image": "images/quiz1.jpg",
+		    "title": "What's this note?",
+		    "option":{
+			    "A": "B",
+			    "B": "E",
+			    "C": "C",
+			    "D": "F"
+		    },
+		    "answer": "B"
+        },
+        "2": {
+            "image": "images/quiz2.jpg",
+		    "title": "What's this note?",
+		    "option":{
+			    "A": "B",
+			    "B": "F",
+			    "C": "A",
+			    "D": "G"
+		    },
+		    "answer": "C"
+        },
+        "3": {
+            "image": "images/quiz3.jpg",
+		    "title": "What's this note?",
+		    "option":{
+		    	"A": "G♯",
+		    	"B": "E♯",
+		    	"C": "C♯",
+		    	"D": "F♭"
+		    },
+		    "answer": "B"
+        },
+        "4": {
+            "image": "images/quiz4.jpg",
+		    "title": "What's this note?",
+		    "option":{
+		    	"A": "B",
+		    	"B": "D",
+		    	"C": "C",
+		    	"D": "F"
+		    },
+		    "answer": "D"
+        },
+        "5": {
+            "image": "images/quiz5.jpg",
+		    "title": "What's this note?",
+		    "option":{
+		    	"A": "B",
+		    	"B": "D",
+		    	"C": "C",
+		    	"D": "E"
+		    },
+		    "answer": "A"
+        }
+    }
+}
