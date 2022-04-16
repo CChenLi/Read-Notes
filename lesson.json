@@ -1,0 +1,87 @@
+{
+    "clef": {
+        "1": {
+            "title": "Low Treble Clef",
+            "description": "Sequentially, we have C(Do) D(Re) E(Mi) F(Fa) G(So) A(La) B(Ti)",
+            "image_path": "images/low_treble_clef.png",
+            "audio_order": [
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "A",
+                "B"
+            ],
+            "audio_path": {
+                "C": "audio/lt/C4.MP3",
+                "D": "audio/lt/D4.MP3",
+                "E": "audio/lt/E4.MP3",
+                "F": "audio/lt/F4.MP3",
+                "G": "audio/lt/G4.MP3",
+                "A": "audio/lt/A4.MP3",
+                "B": "audio/lt/B4.MP3"
+            }
+        },
+        "2": {
+            "title": "High Treble Clef",
+            "description": "Above B, the loop comes back to C.\nSimilarly, we now have C D E F G A B sequentially.",
+            "image_path": "images/high_treble_clef.png",
+            "audio_order": [
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "A",
+                "B"
+            ],
+            "audio_path": {
+                "C": "audio/ht/C5.MP3",
+                "D": "audio/ht/D5.MP3",
+                "E": "audio/ht/E5.MP3",
+                "F": "audio/ht/F5.MP3",
+                "G": "audio/ht/G5.MP3",
+                "A": "audio/ht/A5.MP3",
+                "B": "audio/ht/B5.MP3"
+            }
+        },
+        "3": {
+            "title": "Bass Clef",
+            "description": "Similarly, we now have\nC D E F G A B on Bass Clef",
+            "image_path": "images/bass_clef.png",
+            "audio_order": [
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "A",
+                "B"
+            ],
+            "audio_path": {
+                "C": "audio/bass/C3.MP3",
+                "D": "audio/bass/D3.MP3",
+                "E": "audio/bass/E3.MP3",
+                "F": "audio/bass/F3.MP3",
+                "G": "audio/bass/G3.MP3",
+                "A": "audio/bass/A3.MP3",
+                "B": "audio/bass/B3.MP3"
+            }
+        }
+    },
+    "staff": {
+        "1": {
+            "image_path": "images/staff1.png",
+            "description": "A staff consists of five horizontal lines and four spaces."
+        },
+        "2": {
+            "image_path": "images/staff2.png",
+            "description": "Notes can be written on the lines and between the spaces with no difference. They can be written above and below the staff using ledger lines, which are shorter lines that extend the staff when notes are too high or too low."
+        },
+        "3": {
+            "image_path": "images/staff3.png",
+            "description": "Above is Treble Clef. Below is Bass Clef.\nThey indicate different range of notes."
+        }
+    }
+}
