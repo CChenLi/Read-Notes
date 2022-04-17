@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <script src="{{ url_for('static',filename='clef.js') }}"> </script>
+        <script>
+            let lesson = {{lesson | tojson}}
+            let id = {{id}}
+        </script>
+    </head>
+   
+    <body>
+        <div class = "bigbold"> 
+            {{lesson.title}}
+        </div>
+        <div> 
+            <img src= {{lesson.image_path}}>
+        </div>
+        <div class = "lessontext">
+            {{lesson.description}}
+        </div>
+        <div id = "button"> 
+        </div>
+    </body>
+</html>
+
+
+{% endblock %}
+

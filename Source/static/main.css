@@ -1,0 +1,31 @@
+.bigbold{
+    padding-left : 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.homebutton{
+    border-color: skyblue;
+    background-color: skyblue;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.lessontext{
+    font-size:20px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+.rightmargin{
+    margin-right: 20px;
+}
+.clickable:hover{
+    cursor: pointer;
+    text-decoration: underline black;
+}
+
