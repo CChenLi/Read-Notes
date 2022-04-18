@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <script src="{{ url_for('static',filename='quiz.js') }}"> </script>
+        <script>
+            let quiz = {{quiz | tojson}}
+            let id = {{id}}
+            let right = {{right}}
+        </script>
+    </head>
+   
+    <body>
+        <div class = "quiztitle">
+          {{quiz.title}}
+        </div>
+        <div class="quizimg"> 
+            <img src= {{quiz.image}}>
+        </div>
+        <div class="quizcontent">
+            {% for d in quiz.option %}
+              <div id="option{{d}}">{{d}}. {{quiz.option[d]}}</div>
+            {% endfor %}
+        </div>
+        <div id="review">
+          
+        </div>
+        <div id = "quizbutton"> 
+        </div>
+        <div id="totalscore">
+        </div>
+        
+    </body>
+</html>
+
+
+{% endblock %}

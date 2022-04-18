@@ -4,5 +4,10 @@ $(document).ready(function(){
         console.log('aaa')
         event.preventDefault();
     })
+    
 })
-
+$(document).ready(function(){
+    $('#quiz').click(function() {
+        window.location = "/quiz/1";
+    })
+})
