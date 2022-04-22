@@ -1,4 +1,14 @@
 var recent_key = "Q"
+var nums = ["1","2","3","4","5","6","7"]
+var num2key = {
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "F",
+    "5": "G",
+    "6": "A",
+    "7": "B"
+}
 
 function play_key(key) {
     var audio_path = lesson.audio_path[key]
@@ -12,6 +22,10 @@ function play_key(key) {
 function load_key() {
     $(document).keydown(function (e) {
         var key = e.key.toUpperCase();
+        if (nums.includes(key)) {
+            key = num2key[key]
+        }
+        console.log(key)
         if (lesson.audio_order.includes(key)) {
             play_key(key)
         }
