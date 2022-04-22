@@ -14,13 +14,13 @@
                 "B"
             ],
             "audio_path": {
-                "C": "audio/lt/C4.MP3",
-                "D": "audio/lt/D4.MP3",
-                "E": "audio/lt/E4.MP3",
-                "F": "audio/lt/F4.MP3",
-                "G": "audio/lt/G4.MP3",
-                "A": "audio/lt/A4.MP3",
-                "B": "audio/lt/B4.MP3"
+                "C": "/static/audio/lt/C4.MP3",
+                "D": "/static/audio/lt/D4.MP3",
+                "E": "/static/audio/lt/E4.MP3",
+                "F": "/static/audio/lt/F4.MP3",
+                "G": "/static/audio/lt/G4.MP3",
+                "A": "/static/audio/lt/A4.MP3",
+                "B": "/static/audio/lt/B4.MP3"
             }
         },
         "2": {
@@ -37,13 +37,13 @@
                 "B"
             ],
             "audio_path": {
-                "C": "audio/ht/C5.MP3",
-                "D": "audio/ht/D5.MP3",
-                "E": "audio/ht/E5.MP3",
-                "F": "audio/ht/F5.MP3",
-                "G": "audio/ht/G5.MP3",
-                "A": "audio/ht/A5.MP3",
-                "B": "audio/ht/B5.MP3"
+                "C": "/static/audio/ht/C5.MP3",
+                "D": "/static/audio/ht/D5.MP3",
+                "E": "/static/audio/ht/E5.MP3",
+                "F": "/static/audio/ht/F5.MP3",
+                "G": "/static/audio/ht/G5.MP3",
+                "A": "/static/audio/ht/A5.MP3",
+                "B": "/static/audio/ht/B5.MP3"
             }
         },
         "3": {
@@ -60,13 +60,13 @@
                 "B"
             ],
             "audio_path": {
-                "C": "audio/bass/C3.MP3",
-                "D": "audio/bass/D3.MP3",
-                "E": "audio/bass/E3.MP3",
-                "F": "audio/bass/F3.MP3",
-                "G": "audio/bass/G3.MP3",
-                "A": "audio/bass/A3.MP3",
-                "B": "audio/bass/B3.MP3"
+                "C": "/static/audio/bass/C3.MP3",
+                "D": "/static/audio/bass/D3.MP3",
+                "E": "/static/audio/bass/E3.MP3",
+                "F": "/static/audio/bass/F3.MP3",
+                "G": "/static/audio/bass/G3.MP3",
+                "A": "/static/audio/bass/A3.MP3",
+                "B": "/static/audio/bass/B3.MP3"
             }
         }
     },

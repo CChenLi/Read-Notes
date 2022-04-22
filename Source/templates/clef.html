@@ -3,29 +3,38 @@
 {% block content %}
 
 <html>
-    <head>
-        <script src="{{ url_for('static',filename='clef.js') }}"> </script>
-        <script>
-            let lesson = {{lesson | tojson}}
-            let id = {{id}}
-        </script>
-    </head>
-   
-    <body>
-        <div class = "bigbold"> 
-            {{lesson.title}}
+
+<head>
+    <script src="{{ url_for('static',filename='clef.js') }}"> </script>
+    <script>
+        let lesson = {{ lesson | tojson}}
+        let id = {{ id }}
+    </script>
+</head>
+
+<body>
+    <div class="bigbold">
+        {{lesson.title}}
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <img class="lesson-img" src={{lesson.image_path}}>
+            <br>
+            <div id="players"></div>
         </div>
-        <div> 
-            <img src= {{lesson.image_path}}>
+        <div class="col-lg-6 col-12">
+            <div class="lessontext">
+                {{lesson.description}}
+            </div>
         </div>
-        <div class = "lessontext">
-            {{lesson.description}}
-        </div>
-        <div id = "button"> 
-        </div>
-    </body>
+    </div>
+    <hr>
+    <div id = "button"> 
+    </div>
+
+</body>
+
 </html>
 
 
 {% endblock %}
-
