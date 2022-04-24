@@ -34,14 +34,23 @@
 }
 .quizcontent{
     font-size:20px;
-    padding: 10px;
+    padding-left: 80px;
+    padding-top: 80px;
+    display:inline-block;
+    line-height: 30px;
 }
 .quizimg{
     height: 100%;
+    display:inline-block;
 }
 #right{
     color:green
 }
 #wrong{
     color: red
+}
+.quizchoice{
+    text-align: left;
+    border-radius: 5px;
+
 }

@@ -21,7 +21,7 @@
         </div>
         <div class="quizcontent">
             {% for d in quiz.option %}
-              <div id="option{{d}}">{{d}}. {{quiz.option[d]}}</div>
+              <div id="option{{d}}" class = "clickable">{{d}}. {{quiz.option[d]}}</div>
             {% endfor %}
         </div>
         <div id="review">
