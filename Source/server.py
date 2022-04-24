@@ -1,3 +1,4 @@
+from os import times
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
@@ -11,11 +12,20 @@ f1 = open('../quiz.json')
 quiz = json.load(f1)
 
 right_choices = 0
+ips = {}
 
 # ROUTES
 @app.route('/')
 def home():
-   return render_template('home.html', lesson = lesson)   
+   return render_template('home.html', lesson = lesson)
+
+# @app.route('/', methods=['POST'])
+# def add_ip():
+#     ip = request.get_json()
+#     print(ip)
+#     global ips
+#     ips[ip] = 0
+#     return jsonify(result = ips)
 
 @app.route('/lesson')
 def menu():
@@ -37,8 +47,13 @@ def quizyourself(id = None):
 def add_right(id=None):
     json_data = request.get_json() 
     global right_choices
-    right_choices += json_data["right"]
+    if json_data["right"] == 1:
+        right_choices += 1
+    elif json_data["right"] == -1:
+        right_choices = 0
     print(right_choices)
+    # global ips
+    # ips[json_data["ip"]] += json_data["right"]
     return jsonify(result = right_choices)
 
 
