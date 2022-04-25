@@ -4,7 +4,7 @@ $(document).ready(function(){
         var prev = $('<button type = "button" class = "btn btn-light rightmargin" id = "prev"> Prev </button>')
         $(prev).on( "click", function(event) {
             event.preventDefault();
-            window.location = "/lesson/clef/" + (parseInt(id) - 1)
+            window.location = "/lesson/staff/" + (parseInt(id) - 1)
         })
         $("#button").append(prev)
     }
