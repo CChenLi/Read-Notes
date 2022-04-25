@@ -10,6 +10,14 @@ var num2key = {
     "7": "B"
 }
 
+function update_board() {
+    var board_path = lesson.board + "/" + recent_key.toLocaleLowerCase() + ".png"
+    var board = $("<img class='broad-img'>")
+    board.attr('src', board_path)
+    $("#board").empty()
+    $("#board").append(board)
+}
+
 function play_key(key) {
     var audio_path = lesson.audio_path[key]
     const audio = new Audio(audio_path);
@@ -33,6 +41,7 @@ function load_key() {
 }
 
 function load_player() {
+    update_board()
     var player_pad = $("<div id='player-pad'>")
     $("#players").append(player_pad)
     lesson.audio_order.forEach(element => {

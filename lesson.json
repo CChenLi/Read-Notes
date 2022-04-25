@@ -4,6 +4,7 @@
             "title": "Low Treble Clef",
             "description": "Sequentially, we have C(Do) D(Re) E(Mi) F(Fa) G(So) A(La) B(Ti)",
             "image_path": "/static/images/low_treble_clef.png",
+            "board": "/static/images/lt",
             "audio_order": [
                 "C",
                 "D",
@@ -27,6 +28,7 @@
             "title": "High Treble Clef",
             "description": "Above B, the loop comes back to C.\nSimilarly, we now have C D E F G A B sequentially.",
             "image_path": "/static/images/high_treble_clef.png",
+            "board": "/static/images/ht",
             "audio_order": [
                 "C",
                 "D",
@@ -50,6 +52,7 @@
             "title": "Bass Clef",
             "description": "Similarly, we now have\nC D E F G A B on Bass Clef",
             "image_path": "/static/images/bass_clef.png",
+            "board": "/static/images/bass",
             "audio_order": [
                 "C",
                 "D",

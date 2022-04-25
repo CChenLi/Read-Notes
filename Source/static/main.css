@@ -67,3 +67,6 @@
 .player:hover {
     cursor: pointer;
 }
+.broad-img {
+    width: 100%;
+}
