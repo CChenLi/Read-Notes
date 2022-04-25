@@ -1,25 +1,26 @@
 .bigbold{
     font-style: italic;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: bold;
     text-align: center;
     color: rgb(255, 255, 255);
-    font-family:'Courier New', Courier, monospace;
+    font-family: Apple Chancery, 'Courier New', Courier, monospace;
 }
 .artboard {
     padding: 30px;
-    background-color: rgb(206, 229, 248);
+    background-image: url("/static/images/background.jpg");
+    background-position: 50% 50%;
     border-radius: 5rem;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 .area-img {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.73);
     border-radius: 10px;
     padding: 10px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 .area-text {
-    background-color: rgb(47, 84, 155);
+    background-color: rgba(58, 99, 14, 0.584);
     border-radius: 10px;
     padding: 10px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
@@ -44,8 +45,6 @@
 }
 .lessontext{
     font-size:20px;
-    padding-bottom: 30px;
-    padding-top: 15px;
     color: white;
     font-family:'Courier New', Courier, monospace;
 }

@@ -3,26 +3,31 @@
 {% block content %}
 
 <html>
-    <head>
-        <script src="{{ url_for('static',filename='staff.js') }}"> </script>
-        <script>
-            let lesson = {{lesson | tojson}}
-            let id = {{id}}
-        </script>
-    </head>
-   
-    <body>
-        <div > 
-            <img src= {{lesson.image_path}}>
-        </div>
-        <div class = "lessontext">
+
+<head>
+    <script src="{{ url_for('static',filename='staff.js') }}"> </script>
+    <script>
+        let lesson = {{ lesson | tojson}}
+        let id = {{ id }}
+    </script>
+</head>
+
+<body>
+    <div class="area-img">
+        <img src={{lesson.image_path}}>
+    </div>
+    <hr>
+    <div class="area-text">
+        <div class="lessontext">
             {{lesson.description}}
         </div>
-        <div id = "button"> 
-        </div>
-    </body>
+    </div>
+    <br>
+    <div id="button">
+    </div>
+</body>
+
 </html>
 
 
 {% endblock %}
-
