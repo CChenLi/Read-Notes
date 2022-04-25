@@ -5,37 +5,34 @@
 
 <head>
     <script src="{{ url_for('static',filename='home.js') }}"> </script>
+</head>
 
-    <body>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 bigbold nomargin">Read Notes on the Staff</div>
-        </div>
-        <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-6 title">in 10 minutes</div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 homebutton clickable" id = "lesson">Learn Notes</div>
-        </div>
+<div class="bigbold">
+    Read Notes on the Staff
+</div>
 
-        <div class="row mt-3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 homebutton clickable" id = "quiz">Quiz</div>
+<div class="row">
+    <div class="col-lg-6 col-12">
+        <div class="area-img">
+            <div class="btn botton-style" id="lesson">Learn Notes</div>
+            <div class="btn botton-style" id="quiz">Quiz</div>
         </div>
-
-        <div class="row mt-3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <img src="/static/images/note.jpg" width="100%">
+        <hr>
+        <div class="area-text">
+            <div class="lessontext">
+            At anytime of the course, you may press the A~G and 1~7 to play audio, which can help you get familiar with the sound.
             </div>
         </div>
-        
-        <div id = "display">
-        </div>
-    </body>
-</head>
+    </div>
+
+    <div class="col-lg-6 col-12">
+        <div id="board" class="area-keyboard"></div>
+    </div>
+
+
+<div id="display">
+</div>
+
 
 
 
