@@ -34,10 +34,17 @@
 }
 .quizcontent{
     font-size:20px;
-    padding: 10px;
+    padding-left: 60px;
+    padding-top: 40px;
+    display: inline-block;
 }
 .quizimg{
     height: 100%;
+    float: top;
+}
+.quizdiv{
+    height: 150px;
+    display: inline-block;
 }
 #right{
     color:green
