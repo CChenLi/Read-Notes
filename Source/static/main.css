@@ -85,10 +85,20 @@
     display: inline-block;
 }
 #right{
-    color:green
+    margin-left: -10px;
+    color:green;
+    background-color: rgb(240,248,255,0.7);
+    font-size: 25px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 #wrong{
-    color: red
+    margin-left: -10px;
+    color: red;
+    background-color: rgb(240,248,255,0.7);
+    font-size: 25px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 .lesson-img {
     width: 100%;
@@ -107,4 +117,17 @@
 }
 .broad-img {
     width: 100%;
+}
+#score {
+    margin-left: -10px;
+    padding-top: 15px;
+    font-size: 30px;
+    color:darkorange;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(240,248,255,0.7);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#quizbutton{
+    margin: 5px;
 }

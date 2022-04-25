@@ -1,7 +1,8 @@
 $(document).ready(function(){
+  flag = true
   id = parseInt(id)
   right = parseInt(right)
-  if (id == 5){
+  if (id == 10){
     var next = $('<button type = "button" class = "btn btn-light" id = "back"> Back </button>')
     $(next).on( "click", function(event) {
         clear_score()
@@ -18,66 +19,75 @@ $(document).ready(function(){
   }
   
   $("#optionA").click(function() {
-    if (quiz.answer == "A") {
-      var review = $('<div id = "right"> Right choice! </div>')
-      send_right(1)
-    } else {
-      var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
-      send_right(0)
+    if (flag == true) {
+      flag = false
+      if (quiz.answer == "A") {
+        var review = $('<div id = "right"> Right choice! </div>')
+        send_right(1)
+      } else {
+        var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
+        send_right(0)
+      }
+      $("#review").append(review)
+      $("#quizbutton").append(next)
     }
-    $("#review").append(review)
-    $("#quizbutton").append(next)
+    
   });
   $("#optionB").click(function() {
-    if (quiz.answer == "B") {
-      var review = $('<div id = "right"> Right choice! </div>')
-      send_right(1)
-    } else {
-      var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
-      send_right(0)
+    if (flag == true) {
+      flag = false
+      if (quiz.answer == "B") {
+        var review = $('<div id = "right"> Right choice! </div>')
+        send_right(1)
+      } else {
+        var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
+        send_right(0)
+      }
+      $("#review").append(review)
+      $("#quizbutton").append(next)
     }
-    $("#review").append(review)
-    $("#quizbutton").append(next)
+    
   });
   $("#optionC").click(function() {
-    if (quiz.answer == "C") {
-      var review = $('<div id = "right"> Right choice! </div>')
-      send_right(1)
-    } else {
-      var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
-      send_right(0)
+    if (flag == true) {
+      flag = false
+      if (quiz.answer == "C") {
+        var review = $('<div id = "right"> Right choice! </div>')
+        send_right(1)
+      } else {
+        var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
+        send_right(0)
+      }
+      $("#review").append(review)
+      $("#quizbutton").append(next)
     }
-    $("#review").append(review)
-    $("#quizbutton").append(next)
+    
   });
   $("#optionD").click(function() {
-    if (quiz.answer == "D") {
-      var review = $('<div id = "right"> Right choice! </div>')
-      send_right(1)
-    } else {
-      var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
-      send_right(0)
-    }
-    $("#review").append(review)
-    $("#quizbutton").append(next)
+    if (flag == true) {
+      flag = false
+      if (quiz.answer == "D") {
+        var review = $('<div id = "right"> Right choice! </div>')
+        send_right(1)
+      } else {
+        var review = $('<div id = "wrong"> Wrong choice! This is '+ quiz.option[quiz.answer] + '</div>')
+        send_right(0)
+      }
+      $("#review").append(review)
+      $("#quizbutton").append(next)
+    } 
   });
 
-  
 })
 
 function send_right(x){
-  let ip
-  $.getJSON("https://api.ipify.org/?format=json", function(e) {
-        console.log(e.ip);
-        ip = e.ip
-        });
   $.ajax({
     type: "POST",
     url: "add_right",
     dataType: "json",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify({
-      "right": x, "ip": ip}),
+      "right": x}),
     success: function(result){
       show_result(result["result"])
     },
@@ -88,7 +98,6 @@ function send_right(x){
       console.log(error)
     }
   })
-  console.log(ip)
 }
 
 function clear_score(){
@@ -110,8 +119,8 @@ function clear_score(){
 }
 
 function show_result(right){
-  if (id == 5) {
-    var score = $('<div id = "score"> Final score: '+ right+'/5</div>')
+  if (id == 10) {
+    var score = $('<div id = "score"> Your Final score: '+ right+'/10</div>')
     $("#totalscore").append(score)
   }
 }

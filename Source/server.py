@@ -12,20 +12,11 @@ f1 = open('../quiz.json')
 quiz = json.load(f1)
 
 right_choices = 0
-ips = {}
 
 # ROUTES
 @app.route('/')
 def home():
    return render_template('home.html', lesson = lesson)
-
-# @app.route('/', methods=['POST'])
-# def add_ip():
-#     ip = request.get_json()
-#     print(ip)
-#     global ips
-#     ips[ip] = 0
-#     return jsonify(result = ips)
 
 @app.route('/lesson')
 def menu():
@@ -52,8 +43,6 @@ def add_right(id=None):
     elif json_data["right"] == -1:
         right_choices = 0
     print(right_choices)
-    # global ips
-    # ips[json_data["ip"]] += json_data["right"]
     return jsonify(result = right_choices)
 
 
