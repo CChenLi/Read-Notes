@@ -13,17 +13,27 @@
     </head>
    
     <body>
-        <div class = "quiztitle">
-          {{quiz.title}}
+        <div class = "area-text">
+            <div class="quiztitle">
+                {{quiz.title}}
+            </div>
         </div>
-        <div class="quizdiv"> 
-            <img class="quizimg" src= {{quiz.image}}>
+        <br>
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="area-img"> 
+                    <img class="quizimg" src= {{quiz.image}}>
+                    {% for d in quiz.option %}
+                      <div id="option{{d}}" class = "btn botton-style">{{quiz.option[d]}}</div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+            <div class="col-lg-6 col-12">
+            
+            </div>
         </div>
-        <div class="quizcontent">
-            {% for d in quiz.option %}
-              <div id="option{{d}}" class = "clickable">{{d}}. {{quiz.option[d]}}</div>
-            {% endfor %}
-        </div>
+
         <div id="review">
           
         </div>

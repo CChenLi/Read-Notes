@@ -16,20 +16,24 @@
     <div class="bigbold">
         {{lesson.title}}
     </div>
+    <br>
     <div class="row">
         <div class="col-lg-6 col-12">
-            <div class="area-1">
+            <div class="area-img">
                 <img class="lesson-img" src={{lesson.image_path}}>
                 <br>
                 <div id="players"></div>    
             </div>
             <hr>
-            <div class="lessontext">
+            <div class="area-text">
+                <div class="lessontext">
                 {{lesson.description}}
             </div>
+            </div>
+            
         </div>
         <div class="col-lg-6 col-12">
-            <div id="board"></div>
+            <div id="board" class="area-keyboard"></div>
         </div>
     </div>
     <hr>
