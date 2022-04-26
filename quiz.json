@@ -45,7 +45,7 @@
 		    "answer": "D"
         },
         "5": {
-            "image": "/static/images/quiz5.jpg",
+            "image": "/static/images/quiz5.png",
 		    "title": "What's this note?",
 		    "option":{
 		    	"A": "B",
@@ -108,7 +108,7 @@
 		    	"C": "D",
 		    	"D": "C"
 		    },
-		    "answer": "B"
+		    "answer": "C"
         }
     }
 }
