@@ -14,15 +14,7 @@
                 "A",
                 "B"
             ],
-            "audio_path": {
-                "C": "/static/audio/lt/C4.MP3",
-                "D": "/static/audio/lt/D4.MP3",
-                "E": "/static/audio/lt/E4.MP3",
-                "F": "/static/audio/lt/F4.MP3",
-                "G": "/static/audio/lt/G4.MP3",
-                "A": "/static/audio/lt/A4.MP3",
-                "B": "/static/audio/lt/B4.MP3"
-            }
+            "audio_path": "/static/audio/lt"
         },
         "2": {
             "title": "High Treble Clef",
@@ -38,15 +30,7 @@
                 "A",
                 "B"
             ],
-            "audio_path": {
-                "C": "/static/audio/ht/C5.MP3",
-                "D": "/static/audio/ht/D5.MP3",
-                "E": "/static/audio/ht/E5.MP3",
-                "F": "/static/audio/ht/F5.MP3",
-                "G": "/static/audio/ht/G5.MP3",
-                "A": "/static/audio/ht/A5.MP3",
-                "B": "/static/audio/ht/B5.MP3"
-            }
+            "audio_path": "/static/audio/ht"
         },
         "3": {
             "title": "Bass Clef",
@@ -62,15 +46,7 @@
                 "A",
                 "B"
             ],
-            "audio_path": {
-                "C": "/static/audio/bass/C3.MP3",
-                "D": "/static/audio/bass/D3.MP3",
-                "E": "/static/audio/bass/E3.MP3",
-                "F": "/static/audio/bass/F3.MP3",
-                "G": "/static/audio/bass/G3.MP3",
-                "A": "/static/audio/bass/A3.MP3",
-                "B": "/static/audio/bass/B3.MP3"
-            }
+            "audio_path": "/static/audio/bass"
         }
     },
     "staff": {
