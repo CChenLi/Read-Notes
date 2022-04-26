@@ -23,6 +23,8 @@
             <div class="col-lg-6 col-12">
                 <div class="area-img"> 
                     <img class="quizimg" src= {{quiz.image}}>
+                    <br>
+                    <br>
                     {% for d in quiz.option %}
                       <div id="option{{d}}" class = "btn botton-style">{{quiz.option[d]}}</div>
                     {% endfor %}
@@ -30,7 +32,7 @@
                 
             </div>
             <div class="col-lg-6 col-12">
-            
+                <div id="board" class="area-keyboard"></div>
             </div>
         </div>
 

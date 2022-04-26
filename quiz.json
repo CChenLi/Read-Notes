@@ -1,114 +1,124 @@
 {
-    "quiz": {
-        "1": {
-            "image": "/static/images/quiz1.jpg",
-		    "title": "What's this note?",
-		    "option":{
-			    "A": "B",
-			    "B": "E",
-			    "C": "C",
-			    "D": "F"
-		    },
-		    "answer": "B"
-        },
-        "2": {
-            "image": "/static/images/quiz2.jpg",
-		    "title": "What's this note?",
-		    "option":{
-			    "A": "B",
-			    "B": "F",
-			    "C": "A",
-			    "D": "G"
-		    },
-		    "answer": "C"
-        },
-        "3": {
-            "image": "/static/images/quiz3.jpg",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "G",
-		    	"B": "E",
-		    	"C": "C",
-		    	"D": "F"
-		    },
-		    "answer": "B"
-        },
-        "4": {
-            "image": "/static/images/quiz4.jpg",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "B",
-		    	"B": "D",
-		    	"C": "C",
-		    	"D": "F"
-		    },
-		    "answer": "D"
-        },
-        "5": {
-            "image": "/static/images/quiz5.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "B",
-		    	"B": "D",
-		    	"C": "C",
-		    	"D": "E"
-		    },
-		    "answer": "A"
-        },
-				"6": {
-            "image": "/static/images/quiz6.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "E",
-		    	"B": "D",
-		    	"C": "C",
-		    	"D": "F"
-		    },
-		    "answer": "D"
-        },
-				"7": {
-            "image": "/static/images/quiz7.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "B",
-		    	"B": "F",
-		    	"C": "G",
-		    	"D": "A"
-		    },
-		    "answer": "B"
-        },
-				"8": {
-            "image": "/static/images/quiz8.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "B",
-		    	"B": "G",
-		    	"C": "A",
-		    	"D": "D"
-		    },
-		    "answer": "C"
-        },
-				"9": {
-            "image": "/static/images/quiz9.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "F",
-		    	"B": "B",
-		    	"C": "C",
-		    	"D": "E"
-		    },
-		    "answer": "A"
-        },
-				"10": {
-            "image": "/static/images/quiz10.png",
-		    "title": "What's this note?",
-		    "option":{
-		    	"A": "E",
-		    	"B": "A",
-		    	"C": "D",
-		    	"D": "C"
-		    },
-		    "answer": "C"
-        }
-    }
+	"quiz": {
+		"1": {
+			"image": "/static/images/quiz1.jpg",
+			"title": "What's this note?",
+			"range": "lt",
+			"option": {
+				"A": "B",
+				"B": "E",
+				"C": "C",
+				"D": "F"
+			},
+			"answer": "B"
+		},
+		"2": {
+			"image": "/static/images/quiz2.jpg",
+			"title": "What's this note?",
+			"range": "bass",
+			"option": {
+				"A": "B",
+				"B": "F",
+				"C": "A",
+				"D": "G"
+			},
+			"answer": "C"
+		},
+		"3": {
+			"image": "/static/images/quiz3.jpg",
+			"title": "What's this note?",
+			"range": "ht",
+			"option": {
+				"A": "G",
+				"B": "E",
+				"C": "C",
+				"D": "F"
+			},
+			"answer": "B"
+		},
+		"4": {
+			"image": "/static/images/quiz4.jpg",
+			"title": "What's this note?",
+			"range": "bass",
+			"option": {
+				"A": "B",
+				"B": "D",
+				"C": "C",
+				"D": "F"
+			},
+			"answer": "D"
+		},
+		"5": {
+			"image": "/static/images/quiz5.png",
+			"title": "What's this note?",
+			"range": "bass",
+			"option": {
+				"A": "B",
+				"B": "D",
+				"C": "C",
+				"D": "E"
+			},
+			"answer": "A"
+		},
+		"6": {
+			"image": "/static/images/quiz6.png",
+			"title": "What's this note?",
+			"range": "ht",
+			"option": {
+				"A": "E",
+				"B": "D",
+				"C": "C",
+				"D": "F"
+			},
+			"answer": "D"
+		},
+		"7": {
+			"image": "/static/images/quiz7.png",
+			"title": "What's this note?",
+			"range": "lt",
+			"option": {
+				"A": "B",
+				"B": "F",
+				"C": "G",
+				"D": "A"
+			},
+			"answer": "B"
+		},
+		"8": {
+			"image": "/static/images/quiz8.png",
+			"title": "What's this note?",
+			"range": "lt",
+			"option": {
+				"A": "B",
+				"B": "G",
+				"C": "A",
+				"D": "D"
+			},
+			"answer": "C"
+		},
+		"9": {
+			"image": "/static/images/quiz9.png",
+			"title": "What's this note?",
+			"range": "bass",
+			"option": {
+				"A": "F",
+				"B": "B",
+				"C": "C",
+				"D": "E"
+			},
+			"answer": "A"
+		},
+		"10": {
+			"image": "/static/images/quiz10.png",
+			"title": "What's this note?",
+			"range": "lt",
+			"option": {
+				"A": "E",
+				"B": "A",
+				"C": "D",
+				"D": "C"
+			},
+			"answer": "C"
+		}
+	}
 }

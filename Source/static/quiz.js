@@ -1,4 +1,64 @@
+var recent_key = "Q"
+var nums = ["1","2","3","4","5","6","7"]
+var audio_order = ["C", "D", "E", "F", "G", "A", "B",]
+var num2key = {
+    "1": "C",
+    "2": "D",
+    "3": "E",
+    "4": "F",
+    "5": "G",
+    "6": "A",
+    "7": "B"
+}
+
+function update_board() {
+  var board_path = "/static/images/" + quiz.range + "/" + recent_key.toLocaleLowerCase() + ".png"
+  var board = $("<img class='broad-img'>")
+  board.attr('src', board_path)
+  $("#board").empty()
+  $("#board").append(board)
+}
+
+function play_key(key) {
+  var audio_path = "/static/audio/" + quiz.range + "/" + key + ".MP3"
+  const audio = new Audio(audio_path);
+  audio.play();
+  recent_key = key
+  update_board()
+}
+
+function load_key() {
+  $(document).keydown(function (e) {
+      var key = e.key.toUpperCase();
+      if (nums.includes(key)) {
+          key = num2key[key]
+      }
+      console.log(key)
+      if (audio_order.includes(key)) {
+          play_key(key)
+      }
+  })
+}
+
+function register_enter_audio(id, key) {
+  var botton_id = "#option" + id
+  console.log(botton_id)
+  $(botton_id).mouseenter(function () {
+    console.log("enter", key)
+    play_key(key)
+  })
+}
+
+function ender_audio() {
+  for (const d in quiz.option) {
+    register_enter_audio(d, quiz.option[d])
+  }
+}
+
 $(document).ready(function(){
+  load_key()
+  update_board()
+  ender_audio()
   flag = true
   id = parseInt(id)
   right = parseInt(right)
