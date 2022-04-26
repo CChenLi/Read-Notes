@@ -65,7 +65,7 @@ $(document).ready(function(){
     load_player()
     load_key()
     if (id > 1){
-        var prev = $('<button type = "button" class = "btn btn-light rightmargin" id = "prev"> Prev </button>')
+        var prev = $('<button type = "button" class = "btn botton-style rightmargin" id = "prev"> Prev </button>')
         $(prev).on( "click", function(event) {
             event.preventDefault();
             window.location = "/lesson/clef/" + (parseInt(id) - 1)
@@ -73,14 +73,14 @@ $(document).ready(function(){
         $("#button").append(prev)
     }
     if (id == 3){
-        var next = $('<button type = "button" class = "btn btn-light" id = "back"> Back </button>')
+        var next = $('<button type = "button" class = "btn botton-style" id = "back"> Back </button>')
         $(next).on( "click", function(event) {
             event.preventDefault();
             window.location = "/lesson"
         })
     }
     else{
-        var next = $('<button type = "button" class = "btn btn-light" id = "next"> Next </button>')
+        var next = $('<button type = "button" class = "btn botton-style" id = "next"> Next </button>')
         $(next).on( "click", function(event) {
             event.preventDefault();
             window.location = "/lesson/clef/" + (parseInt(id) + 1)
