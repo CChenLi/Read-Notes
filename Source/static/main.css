@@ -11,7 +11,7 @@
 .artboard {
     padding: 30px;
     background-image: url("/static/images/background.jpg");
-    background-position: -900px -300px;
+    background-position: -800px -400px;
     border-radius: 5rem;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
     min-height: 400px;

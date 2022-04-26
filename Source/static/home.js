@@ -9,15 +9,7 @@ lesson = { // get this from server
         "A",
         "B"
     ],
-    "audio_path": {
-        "C": "/static/audio/ht/C5.MP3",
-        "D": "/static/audio/ht/D5.MP3",
-        "E": "/static/audio/ht/E5.MP3",
-        "F": "/static/audio/ht/F5.MP3",
-        "G": "/static/audio/ht/G5.MP3",
-        "A": "/static/audio/ht/A5.MP3",
-        "B": "/static/audio/ht/B5.MP3"
-    }
+    "audio_path": "/static/audio/ht"
 }
 
 var recent_key = "Q"
@@ -42,6 +34,14 @@ function update_board() {
 
 function play_key(key) {
     var audio_path = lesson.audio_path[key]
+    const audio = new Audio(audio_path);
+    audio.play();
+    recent_key = key
+    update_board()
+}
+
+function play_key(key) {
+    var audio_path = lesson.audio_path + "/" + key + ".MP3"
     const audio = new Audio(audio_path);
     audio.play();
     recent_key = key

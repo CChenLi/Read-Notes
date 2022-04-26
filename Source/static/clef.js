@@ -19,7 +19,7 @@ function update_board() {
 }
 
 function play_key(key) {
-    var audio_path = lesson.audio_path[key]
+    var audio_path = lesson.audio_path + "/" + key + ".MP3"
     const audio = new Audio(audio_path);
     audio.play();
     recent_key = key
