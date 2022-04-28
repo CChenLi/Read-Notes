@@ -3,6 +3,7 @@ from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
 import json
+# from waitress import serve
 
 app = Flask(__name__)
 
@@ -47,7 +48,8 @@ def add_right(id=None):
 
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug=True)
+   # serve(app, host='0.0.0.0')
 
 
 
