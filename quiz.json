@@ -1,7 +1,7 @@
 {
 	"quiz": {
 		"1": {
-			"image": "/static/images/quiz1.jpg",
+			"image": "/static/images/quiz1.png",
 			"title": "What's this note?",
 			"range": "lt",
 			"option": {
@@ -13,7 +13,7 @@
 			"answer": "B"
 		},
 		"2": {
-			"image": "/static/images/quiz2.jpg",
+			"image": "/static/images/quiz2.png",
 			"title": "What's this note?",
 			"range": "bass",
 			"option": {
@@ -25,7 +25,7 @@
 			"answer": "C"
 		},
 		"3": {
-			"image": "/static/images/quiz3.jpg",
+			"image": "/static/images/quiz3.png",
 			"title": "What's this note?",
 			"range": "ht",
 			"option": {
@@ -37,7 +37,7 @@
 			"answer": "B"
 		},
 		"4": {
-			"image": "/static/images/quiz4.jpg",
+			"image": "/static/images/quiz4.png",
 			"title": "What's this note?",
 			"range": "bass",
 			"option": {
