@@ -69,8 +69,11 @@ $(document).ready(function(){
         event.preventDefault();
         window.location = "/"
     })
-}
+  }
   else{
+      if(id == 1){
+        clear_score()
+      }
       var next = $('<button type = "button" class = "btn btn-light" id = "next"> Next </button>')
       $(next).on( "click", function(event) {
           event.preventDefault();
