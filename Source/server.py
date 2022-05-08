@@ -12,7 +12,7 @@ lesson = json.load(f)
 f1 = open('../quiz.json')
 quiz = json.load(f1)
 
-right_choices = 0
+right_choices = [-1 for i in range(10)]
 
 # ROUTES
 @app.route('/')
@@ -33,16 +33,20 @@ def staff(id = None):
 
 @app.route('/quiz/<id>')
 def quizyourself(id = None):
+    global right_choices
     return render_template('quiz.html', quiz = quiz["quiz"][id], id = id, right = right_choices)
 
 @app.route('/quiz/<id>', methods=['POST'])
 def add_right(id=None):
     json_data = request.get_json() 
     global right_choices
-    if json_data["right"] == 1:
-        right_choices += 1
-    elif json_data["right"] == -1:
-        right_choices = 0
+    print(json_data)
+    value = json_data["right"]
+    idx = json_data["id"]-1
+    if value == 400:
+        right_choices = [-1 for i in range(10)]
+    else:
+        right_choices[idx] = value
     print(right_choices)
     return jsonify(result = right_choices)
 
