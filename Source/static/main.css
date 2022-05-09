@@ -67,6 +67,12 @@
     text-align: left;
     font-weight: bold;
 }
+.botton-style.green {
+    background-color: rgb(116 164 28);
+}
+.botton-style.red {
+    background-color: rgb(236, 97, 32);
+}
 .quiztitle{
     font-size:20px;
     padding: 15px;

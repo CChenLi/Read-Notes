@@ -118,7 +118,7 @@ function clear_score() {
 
 function show_result(right) {
   if (id == 10) {
-    var score_value = right.reduce((partialSum, a) => partialSum + a, 0)
+    var score_value = right.reduce((partialSum, a) => partialSum + Math.max(a, 0), 0)
     var score_main = $("<span class='score-main'>")
     score_main.html(score_value)
     var score_text = $("<div>Final score:</div>")
@@ -131,10 +131,22 @@ function show_result(right) {
   }
 }
 
-function register_single_option(key, id, next) {
+function update_key_color(chosen, answer) {
+  var chosen_key = "#option" + chosen
+  var true_key = "#option" + answer
+  $(chosen_key).addClass("red")
+  $(true_key).removeClass("red")
+  $(true_key).addClass("green")
+}
+
+function register_single_option(key, id, next, answer) {
   var botton_id = "#option" + key
+  var true_key = "#option" + answer
   $(botton_id).click(function () {
     send_right(key, id, next)
+    $(botton_id).addClass("red")
+    $(true_key).removeClass("red")
+    $(true_key).addClass("green")
   });
 }
 
@@ -144,16 +156,17 @@ function register_option(quiz, id, next, right) {
   var answer = quiz["answer"]
   var ediable = (chosen == "Q")
   if (ediable) {
-    register_single_option("A", id, next)
-    register_single_option("B", id, next)
-    register_single_option("C", id, next)
-    register_single_option("D", id, next)
+    register_single_option("A", id, next, answer)
+    register_single_option("B", id, next, answer)
+    register_single_option("C", id, next, answer)
+    register_single_option("D", id, next, answer)
   } else {
     if (chosen == answer) {
       var review = $('<div id = "right"> Right choice! </div>')
     } else {
       var review = $('<div id = "wrong"> Wrong choice! This is ' + quiz.option[quiz.answer] + '</div>')
     }
+    update_key_color(chosen, answer)
     $("#review").append(review)
     $("#quizbutton").append(next)
     if (id == 10) {
