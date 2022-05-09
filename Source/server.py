@@ -7,10 +7,10 @@ import json
 
 app = Flask(__name__)
 
-f = open('../lesson.json')
-lesson = json.load(f)
-f1 = open('../quiz.json')
-quiz = json.load(f1)
+with open('../lesson.json') as f:
+    lesson = json.load(f)
+with open('../quiz.json') as f1:
+    quiz = json.load(f1)["quiz"]
 
 right_choices = [-1 for i in range(10)]
 
@@ -34,21 +34,30 @@ def staff(id = None):
 @app.route('/quiz/<id>')
 def quizyourself(id = None):
     global right_choices
-    return render_template('quiz.html', quiz = quiz["quiz"][id], id = id, right = right_choices)
+    return render_template('quiz.html', quiz = quiz[id], id = id, right = right_choices)
 
 @app.route('/quiz/<id>', methods=['POST'])
 def add_right(id=None):
-    json_data = request.get_json() 
     global right_choices
+    global quiz
+    json_data = request.get_json() 
     print(json_data)
     value = json_data["right"]
-    idx = json_data["id"]-1
-    if value == 400:
+    if value == "clear":
         right_choices = [-1 for i in range(10)]
-    else:
-        right_choices[idx] = value
+        for i in range(10):
+            quiz[str(i+1)]["chosen"] = "Q"
+        return jsonify({"result":right_choices})
+    else: 
+        idx = json_data["id"]
+        quiz[str(idx)]["chosen"] = value
+        if quiz[str(idx)]["chosen"] == quiz[str(idx)]["answer"]:
+            right_choices[idx-1] = 1
+        else:
+            right_choices[idx-1] = 0
     print(right_choices)
-    return jsonify(result = right_choices)
+    return jsonify({"result":right_choices, "quiz":quiz[str(idx)]})
+
 
 
 if __name__ == '__main__':

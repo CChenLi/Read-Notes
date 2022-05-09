@@ -55,58 +55,25 @@ function ender_audio() {
   }
 }
 
-function register_option(choice, next) {
-  var botton_id = "#option" + choice
-  $(botton_id).click(function () {
-    if (flag == true) {
-      flag = false
-      if (quiz.answer == choice) {
-        var review = $('<div id = "right"> Right choice! </div>')
-        send_right(1, id)
-      } else {
-        var review = $('<div id = "wrong"> Wrong choice! This is ' + quiz.option[quiz.answer] + '</div>')
-        send_right(0, id)
-      }
-      $("#review").append(review)
-      $("#quizbutton").append(next)
-    }
+function after_chose(quiz, right, next) {
+  var chosen = quiz["chosen"]
+  var answer = quiz["answer"]
+  if (chosen == answer) {
+    var review = $('<div id = "right"> Right choice! </div>')
+  } else {
+    var review = $('<div id = "wrong"> Wrong choice! This is ' + quiz.option[quiz.answer] + '</div>')
+  }
+  $("#review").append(review)
+  $("#quizbutton").append(next)
+  $("#optionA").off('click')
+  $("#optionB").off('click')
+  $("#optionC").off('click')
+  $("#optionD").off('click')
 
-  });
+  bin_row(right)
 }
 
-$(document).ready(function () {
-  load_key()
-  update_board()
-  ender_audio()
-  flag = true
-  id = parseInt(id)
-  if (id == 10) {
-    var next = $('<button type = "button" class = "btn btn-light" id = "back"> Back </button>')
-    $(next).on("click", function (event) {
-      clear_score()
-      event.preventDefault();
-      window.location = "/"
-    })
-  }
-  else {
-    if (id == 1) {
-      clear_score()
-    }
-    var next = $('<button type = "button" class = "btn btn-light" id = "next"> Next </button>')
-    $(next).on("click", function (event) {
-      event.preventDefault();
-      window.location = "/quiz/" + (parseInt(id) + 1)
-    })
-  }
-
-  register_option("A", next)
-  register_option("B", next)
-  register_option("C", next)
-  register_option("D", next)
-
-})
-
-function send_right(x, id) {
+function send_right(x, id, next) {
   $.ajax({
     type: "POST",
     url: "add_right",
@@ -117,7 +84,8 @@ function send_right(x, id) {
       "id": id
     }),
     success: function (result) {
-      show_result(result["result"])
+      show_result(result.result)
+      after_chose(result.quiz, result.result, next)
     },
     error: function (request, status, error) {
       console.log('error')
@@ -135,7 +103,7 @@ function clear_score() {
     dataType: "json",
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify({
-      "right": 400,
+      "right": "clear",
       "id": -1
     }),
     error: function (request, status, error) {
@@ -150,7 +118,89 @@ function clear_score() {
 
 function show_result(right) {
   if (id == 10) {
-    var score = $('<div id = "score"> Your Final score: ' + right.reduce((partialSum, a) => partialSum + a, 0) + '/10</div>')
-    $("#totalscore").append(score)
+    var score_value = right.reduce((partialSum, a) => partialSum + a, 0)
+    var score_main = $("<span class='score-main'>")
+    score_main.html(score_value)
+    var score_text = $("<div>Final score:</div>")
+    var score_sub = $("<span>/10</span>")
+    var total_score_content = $("<div class='totalscore-content'>")
+    total_score_content.append(score_text)
+    total_score_content.append(score_main)
+    total_score_content.append(score_sub)
+    $("#totalscore").append(total_score_content)
   }
 }
+
+function register_single_option(key, id, next) {
+  var botton_id = "#option" + key
+  $(botton_id).click(function () {
+    send_right(key, id, next)
+  });
+}
+
+function register_option(quiz, id, next, right) {
+  console.log(quiz)
+  var chosen = quiz["chosen"]
+  var answer = quiz["answer"]
+  var ediable = (chosen == "Q")
+  if (ediable) {
+    register_single_option("A", id, next)
+    register_single_option("B", id, next)
+    register_single_option("C", id, next)
+    register_single_option("D", id, next)
+  } else {
+    if (chosen == answer) {
+      var review = $('<div id = "right"> Right choice! </div>')
+    } else {
+      var review = $('<div id = "wrong"> Wrong choice! This is ' + quiz.option[quiz.answer] + '</div>')
+    }
+    $("#review").append(review)
+    $("#quizbutton").append(next)
+    if (id == 10) {
+      show_result(right)
+    }
+  }
+}
+
+function bin_row(right) {
+  $("#bin-row").empty()
+  right.forEach(function(value, idx) {
+    var bin = $("<div class='bin'>")
+    if (value == 1) {
+      bin.addClass("green")
+    } else if (value == 0) {
+      bin.addClass("red")
+    }
+    bin.click(function() {
+      window.location = "/quiz/" + (parseInt(idx) + 1)
+    })
+    console.log("/quiz/" + (parseInt(idx) + 1))
+    $("#bin-row").append(bin)
+  })
+}
+
+$(document).ready(function () {
+  load_key()
+  update_board()
+  ender_audio()
+  id = parseInt(id)
+  bin_row(right)
+  if (id == 10) {
+    var next = $('<button type = "button" class = "btn btn-next" id = "back"> Clear Scores </button>')
+    $(next).on("click", function (event) {
+      clear_score()
+      event.preventDefault();
+      window.location = "/"
+    })
+  }
+  else {
+    var next = $('<button type = "button" class = "btn btn-next" id = "next"> Next </button>')
+    $(next).on("click", function (event) {
+      event.preventDefault();
+      window.location = "/quiz/" + (parseInt(id) + 1)
+    })
+  }
+
+  register_option(quiz, id, next, right)
+
+})

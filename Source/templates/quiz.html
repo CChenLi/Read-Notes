@@ -20,9 +20,17 @@
         </div>
         <br>
         <div class="row">
+            <div class="col-12">
+                <div class="area-img" id="bin-row">
+                    <div class="bin"></div>
+                    <div class="bin blue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-lg-6 col-12">
                 <div class="area-img"> 
-                    <img class="quizimg" src= {{quiz.image}} style = "width: 490px; height: 400px">
+                    <img class="quizimg" src= {{quiz.image}} style = "width: 100%;">
                     <br>
                     <br>
                     {% for d in quiz.option %}
@@ -34,12 +42,9 @@
             <div class="col-lg-6 col-12">
                 <div id="board" class="area-keyboard"></div>
 
-                <div class="col-lg-6 col-12" id = "quizbutton"> 
-                </div>
-                <div id="review">  
-                </div>
-                <div class="col-lg-6 col-12" id="totalscore">
-                </div>
+                <div id="review">  </div>
+                <div id="totalscore"></div>
+                <div id="quizbutton"> </div>
             </div>
             
         </div>

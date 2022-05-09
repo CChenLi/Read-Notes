@@ -88,20 +88,20 @@
     display: inline-block;
 }
 #right{
-    margin-left: -10px;
     color:green;
     background-color: rgb(240,248,255,0.7);
     font-size: 25px;
     border-radius: 10px;
     margin-top: 10px;
+    text-align: center
 }
 #wrong{
-    margin-left: -10px;
-    color: red;
+    color: rgb(236, 97, 32);
     background-color: rgb(240,248,255,0.7);
     font-size: 25px;
     border-radius: 10px;
     margin-top: 10px;
+    text-align: center
 }
 .lesson-img {
     width: 100%;
@@ -121,16 +121,48 @@
 .broad-img {
     width: 100%;
 }
-#score {
-    margin-left: -10px;
-    padding-top: 15px;
+.totalscore-content {
     font-size: 30px;
-    color:darkorange;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(240,248,255,0.7);
+    font-weight: bold;
+    padding: 12px;
+    color:rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(58, 99, 14, 0.584);
     border-radius: 10px;
     margin-top: 10px;
 }
+.score-main {
+    display: inline-block;
+    font-size: 96px;
+}
 #quizbutton{
-    margin: 5px;
+    margin-left: auto; 
+    margin-right: 0;
+}
+.btn-next {
+    display: block;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    margin-left: auto; 
+    margin-right: 0;
+}
+.bin {
+    display: inline-block;
+    background-color: #ffffff;
+    height: 10px;
+    width: 9%;
+    margin: 0 0.5%;
+    border-radius: 5px;
+}
+.bin.green {
+    background-color: rgb(116 164 28);
+}
+.bin.red {
+    background-color: rgb(236, 97, 32);
+}
+.bin:hover{
+    cursor: pointer;
+    text-decoration: underline black;
+    background-color: rgb(3, 20, 35);
 }
