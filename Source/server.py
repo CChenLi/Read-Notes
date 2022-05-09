@@ -17,7 +17,11 @@ right_choices = [-1 for i in range(10)]
 # ROUTES
 @app.route('/')
 def home():
-   return render_template('home.html', lesson = lesson)
+    global right_choices, quiz
+    right_choices = [-1 for i in range(10)]
+    for i in range(10):
+        quiz[str(i+1)]["chosen"] = "Q"
+    return render_template('home.html', lesson = lesson)
 
 @app.route('/lesson')
 def menu():
