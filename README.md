@@ -1,7 +1,9 @@
 # Read-Notes
-Team project for UI design at Columbia University S22
+Final project for UI design at Columbia University S22 with focus on **User Interactive design**. With minimum server and no database.
 
-Instance host on [Piano 2022](http://3.94.149.232:80)
+## Interactive instance host on [Piano 2022](http://3.94.149.232:80)
+
+## [Video Demo](https://youtu.be/ZABlmQMUkV8)
 
 ## Interactive Features
 
