@@ -7,9 +7,9 @@ import json
 
 app = Flask(__name__)
 
-with open('../lesson.json') as f:
+with open('./static/lesson.json') as f:
     lesson = json.load(f)
-with open('../quiz.json') as f1:
+with open('./static/quiz.json') as f1:
     quiz = json.load(f1)["quiz"]
 
 right_choices = [-1 for i in range(10)]
