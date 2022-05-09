@@ -1,5 +1,7 @@
 # Read-Notes
-Final project for UI design at Columbia University S22 with focus on **User Interactive design**. With minimum server and no database.
+- Final project for UI design at Columbia University S22
+- Focus on **User Interactive Design** with minimum backend server and no database.
+- Built with primitive html, css, and flask
 
 ## Interactive instance host on [Piano 2022](http://3.94.149.232:80)
 
